@@ -12,6 +12,7 @@
 body {
   background-color: hsl(204, 43%, 93%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -30,13 +31,28 @@ a:hover {
   max-width: fit-content;
   margin-right: auto;
   margin-left: auto;
+  border-radius: 10px;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.185);
+}
+
+@media(max-width:425px) {
+  .container {
+    max-width: 90vw;
+  }
 }
 
 footer {
   margin-left: 1rem;
-  margin-bottom:1rem;
-  position:absolute;
-  bottom: 0;
+  margin-bottom: 1rem;
+  /* position: absolute;
+  bottom: 0; */
+}
+
+@media(max-width:425px) {
+  footer {
+    margin: 0 auto;
+    margin-bottom: 0.3rem;
+  }
 }
 
 /* Grid setup */
@@ -56,9 +72,9 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: 
-  "section1 section1"
-  "section2 section3";  
+  grid-template-areas:
+    "section1 section1"
+    "section2 section3";
 }
 
 @media(max-width:425px) {
@@ -70,17 +86,101 @@ footer {
 /* Section 1 */
 .section1 {
   background-color: white;
-  padding: 2rem;
+  padding: 3rem;
 }
 
 /* Section 2 */
 .section2 {
   background-color: hsl(179, 62%, 43%);
-  padding: 2rem;
+  padding: 3rem;
 }
 
 /* Section 3 */
 .section3 {
   background-color: hsl(179, 62%, 47%);
-  padding: 2rem;
+  padding: 3rem;
+}
+
+@media(max-width:425px) {
+
+  .section1,
+  .section2,
+  .section3 {
+    padding: 1rem;
+  }
+}
+
+/* Accesory classes */
+
+.text-white {
+  color: white;
+}
+
+.text-cyan {
+  color: hsl(179, 62%, 43%);
+}
+
+.text-green {
+  color: hsl(71, 73%, 54%);
+}
+
+.text-gray {
+  color: hsl(204, 43%, 93%);
+}
+
+.text-blue {
+  color: hsl(218, 22%, 67%);
+}
+
+/* Position */
+.flex {
+  display: flex;  
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+}
+
+/* Spacing */
+
+.my {
+  margin: 0.5em 0;
+}
+
+/* Extras */
+
+#price p {
+  font-size: 2rem;
+  margin-right: .3rem;
+}
+
+.btn {
+  color: #141414;
+  background-color: hsl(71, 73%, 54%);
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  padding: .5em 1em;
+  font-size: 1.1rem;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.185);
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background-color: hsl(71, 73%, 70%);
+  color: #141414;
+}
+
+.btn:focus {
+  outline: none;
 }
