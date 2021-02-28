@@ -2,9 +2,19 @@
 
 /* General */
 * {
+  box-sizing: border-box;
   color: rgb(20, 20, 20);
   margin: 0;
   font-family: Karla;
+  overflow: hidden;
+}
+
+body {
+  background-color: hsl(204, 43%, 93%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 a {
@@ -17,7 +27,7 @@ a:hover {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: fit-content;
   margin-right: auto;
   margin-left: auto;
 }
@@ -45,7 +55,7 @@ footer {
 #main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto;
   grid-template-areas: 
   "section1 section1"
   "section2 section3";  
@@ -57,3 +67,20 @@ footer {
   }
 }
 
+/* Section 1 */
+.section1 {
+  background-color: white;
+  padding: 2rem;
+}
+
+/* Section 2 */
+.section2 {
+  background-color: hsl(179, 62%, 43%);
+  padding: 2rem;
+}
+
+/* Section 3 */
+.section3 {
+  background-color: hsl(179, 62%, 47%);
+  padding: 2rem;
+}
