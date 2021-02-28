@@ -1,1 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* General */
+* {
+  color: rgb(20, 20, 20);
+  margin: 0;
+  font-family: Karla;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsl(179, 62%, 70%);
+}
+
+.container {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+footer {
+  margin-left: 1rem;
+  margin-bottom:1rem;
+  position:absolute;
+  bottom: 0;
+}
+
+/* Grid setup */
+.section1 {
+  grid-area: section1;
+}
+
+.section2 {
+  grid-area: section2;
+}
+
+.section3 {
+  grid-area: section3;
+}
+
+#main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "section1 section1"
+  "section2 section3";  
+}
+
+@media(max-width:425px) {
+  #main {
+    display: block;
+  }
+}
+
